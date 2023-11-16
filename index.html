@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Calorías</title>
+    <link rel="stylesheet" type="text/css" href="css/css1.css">
+</head>
+<body>
+
+<div id="caloriasForm">
+    <h1>Calculadora de Calorías</h1>
+
+    <form id="caloriasForm">
+        <label for="peso">Peso (kg): </label>
+        <input type="number" id="peso" required>
+
+        <label for="altura">Altura (cm): </label>
+        <input type="number" id="altura" required>
+
+        <label for="edad">Edad: </label>
+        <input type="number" id="edad" required>
+
+        <label for="genero">Género: </label>
+        <select id="genero" required>
+            <option value="5">Hombre</option>
+            <option value="-161">Mujer</option>
+        </select>
+
+        <label for="actividad">Nivel de Actividad: </label>
+        <select id="actividad" required>
+            <option value="1.55">Nada</option>
+            <option value="1.85">Moderado</option>
+            <option value="2.2">Activo</option>
+            <option value="2.4">Muy Activo</option>
+        </select>
+
+        <label for="objetivo">Objetivo: </label>
+        <select id="objetivo" required>
+            <option value="-500">Perder Peso</option>
+            <option value="0">Mantenerse</option>
+            <option value="500">Ganar Peso</option>
+        </select>
+
+        <button type="button" onclick="calcularCalorias()">Calcular Calorías</button>
+    </form>
+
+    <p id="resultado"></p>
+</div>
+
+<script src="js/1.js"></script>
+
+</body>
+</html>

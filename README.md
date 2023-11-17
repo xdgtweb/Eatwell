@@ -1,3 +1,3 @@
 # Eatwell
 
-https://xdgtweb.github.io/Eatwell/index.html
+https://xdgtweb.github.io/Eatwelll/index.html

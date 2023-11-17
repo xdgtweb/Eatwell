@@ -1,54 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Calorías</title>
-    <link rel="stylesheet" type="text/css" href="css/css1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/css1.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      text-align: center;
+      display: block;
+    }
+
+    table {
+      border: 2px solid black;
+      border-radius: 20px;
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+      display: inline-block;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    td {
+      border: 2px solid black;
+      text-align: center;
+      font-size: 15px;
+      width: 30px;
+      height: 40px;
+    }
+
+    .br0 {
+      border: 0;
+    }
+
+    .w0 {
+      width: 5px;
+    }
+
+    .h0 {
+      height: 5px;
+    }
+
+    .rotate270 {
+      transform: rotate(270deg);
+    }
+
+    .rotate270 label {
+      display: inline-block;
+    }
+  </style>
+  <title>Tabla con Separación</title>
 </head>
+
 <body>
 
-<div id="caloriasForm">
+  <div id="caloriasForm">
     <h1>Calculadora de Calorías</h1>
 
     <form id="caloriasForm">
-        <label for="peso">Peso (kg): </label>
-        <input type="number" id="peso" required>
+      <label for="peso">Peso (kg): </label>
+      <input type="number" id="peso" required>
 
-        <label for="altura">Altura (cm): </label>
-        <input type="number" id="altura" required>
+      <label for="altura">Altura (cm): </label>
+      <input type="number" id="altura" required>
 
-        <label for="edad">Edad: </label>
-        <input type="number" id="edad" required>
+      <label for="edad">Edad: </label>
+      <input type="number" id="edad" required>
 
-        <label for="genero">Género: </label>
-        <select id="genero" required>
-            <option value="5">Hombre</option>
-            <option value="-161">Mujer</option>
-        </select>
-
-        <label for="actividad">Nivel de Actividad: </label>
-        <select id="actividad" required>
-            <option value="1.55">Nada</option>
-            <option value="1.85">Moderado</option>
-            <option value="2.2">Activo</option>
-            <option value="2.4">Muy Activo</option>
-        </select>
-
-        <label for="objetivo">Objetivo: </label>
-        <select id="objetivo" required>
-            <option value="-500">Perder Peso</option>
-            <option value="0">Mantenerse</option>
-            <option value="500">Ganar Peso</option>
-        </select>
-
-        <button type="button" onclick="calcularCalorias()">Calcular Calorías</button>
+      <label for="genero">Género: </label>
+      <select id="genero" required>
+        <option value="5">Hombre</option>
+        <option value="-161">Mujer</option>
+      </select>
     </form>
 
-    <p id="resultado"></p>
-</div>
+    <script src="js/1.js"></script>
 
-<script src="js/1.js"></script>
+  </div>
+
+  <table>
+    <tbody>
+      <tr>
+        <td class="br0 h0" colspan="2" rowspan="2"></td>
+        <td colspan="3"><label>Bajar Peso / Grasa</label></td>
+        <td class="br0 w0"></td>
+        <td colspan="3"><label>Mantener Peso</label></td>
+        <td class="br0 w0"></td>
+        <td colspan="3"><label>Ganar Peso / Musculo</label></td>
+      </tr>
+      <tr>
+        <td class="br0 h0" colspan="11"></td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="rotate270"><label>Sedentario</label></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td><span class="var19"></span></td>
+        <td><span class="var25"></span></td>
+        <td><span class="var37"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td><span class="var19"></span></td>
+        <td><span class="var21"></span></td>
+        <td><span class="var33"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td><span class="var18"></span></td>
+        <td><span class="var29"></span></td>
+        <td><span class="var41"></span></td>
+      </tr>
+      <tr>
+        <td colspan="3"><span class="var10"></span></td>
+        <td colspan="3"><span class="var6"></span></td>
+        <td colspan="3"><span class="var14"></span></td>
+      </tr>
+      <tr>
+        <td class="br0 h0" colspan="13"></td>
+      </tr>
+      <tr>
+        <td class="rotate270" rowspan="2"><label>Activo</label></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td><span class="var19"></span></td>
+        <td><span class="var26"></span></td>
+        <td><span class="var38"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td><span class="var19"></span></td>
+        <td><span class="var22"></span></td>
+        <td><span class="var34"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td><span class="var18"></span></td>
+        <td><span class="var30"></span></td>
+        <td><span class="var42"></span></td>
+      </tr>
+      <tr>
+        <td colspan="3"><span class="var11"></span></td>
+        <td colspan="3"><span class="var7"></span></td>
+        <td colspan="3"><span class="var15"></span></td>
+      </tr>
+      <tr>
+        <td class="br0 h0" colspan="13"></td>
+      </tr>
+      <tr>
+        <td class="rotate270" rowspan="2"><label>Avanzado</label></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td><span class="var19"></span></td>
+        <td><span class="var27"></span></td>
+        <td><span class="var39"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td><span class="var19"></span></td>
+        <td><span class="var23"></span></td>
+        <td><span class="var35"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td><span class="var18"></span></td>
+        <td><span class="var31"></span></td>
+        <td><span class="var43"></span></td>
+      </tr>
+      <tr>
+        <td colspan="3"><span class="var12"></span></td>
+        <td colspan="3"><span class="var8"></span></td>
+        <td colspan="3"><span class="var16"></span></td>
+      </tr>
+      <tr>
+        <td class="br0 h0" colspan="13"></td>
+      </tr>
+      <tr>
+        <td class="rotate270" rowspan="2"><label>Experto</label></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td><span class="var19"></span></td>
+        <td><span class="var28"></span></td>
+        <td><span class="var40"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td><span class="var19"></span></td>
+        <td><span class="var24"></span></td>
+        <td><span class="var36"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td><span class="var18"></span></td>
+        <td><span class="var32"></span></td>
+        <td><span class="var44"></span></td>
+      </tr>
+      <tr>
+        <td colspan="3"><span class="var13"></span></td>
+        <td colspan="3"><span class="var9"></span></td>
+        <td colspan="3"><span class="var17"></span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="js/1.js"></script>
 
 </body>
+
 </html>

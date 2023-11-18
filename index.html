@@ -5,90 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/css1.css">
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      text-align: center;
-      display: block;
-    }
-
-    table {
-      border: 2px solid black;
-      border-radius: 20px;
-      border-collapse: collapse;
-      margin-left: auto;
-      margin-right: auto;
-      display: inline-block;
-      margin: 10px;
-      padding: 10px;
-    }
-
-    td {
-      border: 2px solid black;
-      text-align: center;
-      font-size: 15px;
-      width: 30px;
-      height: 40px;
-    }
-
-    .br0 {
-      border: 0;
-    }
-
-    .w0 {
-      width: 5px;
-    }
-
-    .h0 {
-      height: 5px;
-    }
-
-    .rotate270 {
-      transform: rotate(270deg);
-    }
-
-    .rotate270 label {
-      display: inline-block;
-    }
-  </style>
   <title>Tabla con Separación</title>
 </head>
 
 <body>
 
-  <div id="caloriasForm">
-    <h1>Calculadora de Calorías</h1>
-
-    <form id="caloriasForm">
-      <label for="peso">Peso (kg): </label>
-      <input type="number" id="peso" required>
-
-      <label for="altura">Altura (cm): </label>
-      <input type="number" id="altura" required>
-
-      <label for="edad">Edad: </label>
-      <input type="number" id="edad" required>
-
-      <label for="genero">Género: </label>
-      <select id="genero" required>
-        <option value="5">Hombre</option>
-        <option value="-161">Mujer</option>
-      </select>
-    </form>
-
-    <script src="js/1.js"></script>
-
-  </div>
-
   <table>
     <tbody>
       <tr>
-        <td class="br0 h0" colspan="2" rowspan="2"></td>
+        <td class="br0 h0 wi" colspan="2" rowspan="3"></td>
         <td colspan="3"><label>Bajar Peso / Grasa</label></td>
         <td class="br0 w0"></td>
         <td colspan="3"><label>Mantener Peso</label></td>
@@ -96,99 +21,344 @@
         <td colspan="3"><label>Ganar Peso / Musculo</label></td>
       </tr>
       <tr>
-        <td class="br0 h0" colspan="11"></td>
+        <td class="br0 h0"></td>
       </tr>
       <tr>
-        <td rowspan="2" class="rotate270"><label>Sedentario</label></td>
-        <td class="br0 w0" rowspan="2"></td>
-        <td><span class="var19"></span></td>
-        <td><span class="var25"></span></td>
-        <td><span class="var37"></span></td>
-        <td class="br0 w0" rowspan="2"></td>
-        <td><span class="var19"></span></td>
-        <td><span class="var21"></span></td>
-        <td><span class="var33"></span></td>
-        <td class="br0 w0" rowspan="2"></td>
-        <td><span class="var18"></span></td>
-        <td><span class="var29"></span></td>
-        <td><span class="var41"></span></td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/proteinas.svg" width="100%" height="100%" />
+          </svg>
+          <label class="art">Proteinas</label>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/grasas.svg" width="100%" height="100%" />
+          </svg>
+          <label class="art">Grasas</label>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/carbohidratos.svg" width="100%" height="100%" />
+          </svg>
+          <label class="art">Carbohidratos</label>
+        </td>
+        <td class="br0 w0"></td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/proteinas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/grasas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/carbohidratos.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td class="br0 w0"></td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/proteinas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/grasas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/carbohidratos.svg" width="100%" height="100%" />
+          </svg>
+        </td>
       </tr>
       <tr>
-        <td colspan="3"><span class="var10"></span></td>
-        <td colspan="3"><span class="var6"></span></td>
-        <td colspan="3"><span class="var14"></span></td>
+        <td class="wi" rowspan="2"><label class="rotate270">Sedentario</label></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td class="red bordeA"><span class="var19"></span></td>
+        <td class="yellow"><span class="var25"></span></td>
+        <td class="green bordeB"><span class="var37"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td class="red bordeA"><span class="var19"></span></td>
+        <td class="yellow"><span class="var21"></span></td>
+        <td class="green bordeB"><span class="var33"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td class="red bordeA"><span class="var18"></span></td>
+        <td class="yellow"><span class="var29"></span></td>
+        <td class="green bordeB"><span class="var41"></span></td>
       </tr>
       <tr>
-        <td class="br0 h0" colspan="13"></td>
+        <td class="blue bordeC" colspan="3"><span class="var10"></span></td>
+        <td class="blue bordeC" colspan="3"><span class="var6"></span></td>
+        <td class="blue bordeC" colspan="3"><span class="var14"></span></td>
       </tr>
       <tr>
-        <td class="rotate270" rowspan="2"><label>Activo</label></td>
-        <td class="br0 w0" rowspan="2"></td>
-        <td><span class="var19"></span></td>
-        <td><span class="var26"></span></td>
-        <td><span class="var38"></span></td>
-        <td class="br0 w0" rowspan="2"></td>
-        <td><span class="var19"></span></td>
-        <td><span class="var22"></span></td>
-        <td><span class="var34"></span></td>
-        <td class="br0 w0" rowspan="2"></td>
-        <td><span class="var18"></span></td>
-        <td><span class="var30"></span></td>
-        <td><span class="var42"></span></td>
+        <td class="br0 h0 wi" colspan="13"></td>
       </tr>
       <tr>
-        <td colspan="3"><span class="var11"></span></td>
-        <td colspan="3"><span class="var7"></span></td>
-        <td colspan="3"><span class="var15"></span></td>
+        <td colspan="2" class="br0 wi"></td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/proteinas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/grasas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/carbohidratos.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td class="br0 w0"></td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/proteinas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/grasas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/carbohidratos.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td class="br0 w0"></td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/proteinas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/grasas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/carbohidratos.svg" width="100%" height="100%" />
+          </svg>
+        </td>
       </tr>
       <tr>
-        <td class="br0 h0" colspan="13"></td>
+        <td class="wi" rowspan="2"><label class="rotate270">Activo</label></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td class="red bordeA"><span class="var19"></span></td>
+        <td class="yellow"><span class="var26"></span></td>
+        <td class="green bordeB"><span class="var38"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td class="red bordeA"><span class="var19"></span></td>
+        <td class="yellow"><span class="var22"></span></td>
+        <td class="green bordeB"><span class="var34"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td class="red bordeA"><span class="var18"></span></td>
+        <td class="yellow"><span class="var30"></span></td>
+        <td class="green bordeB"><span class="var42"></span></td>
       </tr>
       <tr>
-        <td class="rotate270" rowspan="2"><label>Avanzado</label></td>
-        <td class="br0 w0" rowspan="2"></td>
-        <td><span class="var19"></span></td>
-        <td><span class="var27"></span></td>
-        <td><span class="var39"></span></td>
-        <td class="br0 w0" rowspan="2"></td>
-        <td><span class="var19"></span></td>
-        <td><span class="var23"></span></td>
-        <td><span class="var35"></span></td>
-        <td class="br0 w0" rowspan="2"></td>
-        <td><span class="var18"></span></td>
-        <td><span class="var31"></span></td>
-        <td><span class="var43"></span></td>
+        <td class="blue bordeC" colspan="3"><span class="var11"></span></td>
+        <td class="blue bordeC" colspan="3"><span class="var7"></span></td>
+        <td class="blue bordeC" colspan="3"><span class="var15"></span></td>
       </tr>
       <tr>
-        <td colspan="3"><span class="var12"></span></td>
-        <td colspan="3"><span class="var8"></span></td>
-        <td colspan="3"><span class="var16"></span></td>
+        <td class="br0 h0 wi" colspan="13"></td>
       </tr>
       <tr>
-        <td class="br0 h0" colspan="13"></td>
+        <td colspan="2" class="br0 wi"></td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/proteinas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/grasas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/carbohidratos.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td class="br0 w0"></td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/proteinas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/grasas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/carbohidratos.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td class="br0 w0"></td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/proteinas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/grasas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/carbohidratos.svg" width="100%" height="100%" />
+          </svg>
+        </td>
       </tr>
       <tr>
-        <td class="rotate270" rowspan="2"><label>Experto</label></td>
+        <td rowspan="2" class="wi"><label class="rotate270">Avanzado</label></td>
         <td class="br0 w0" rowspan="2"></td>
-        <td><span class="var19"></span></td>
-        <td><span class="var28"></span></td>
-        <td><span class="var40"></span></td>
+        <td class="red bordeA"><span class="var19"></span></td>
+        <td class="yellow"><span class="var27"></span></td>
+        <td class="green bordeB"><span class="var39"></span></td>
         <td class="br0 w0" rowspan="2"></td>
-        <td><span class="var19"></span></td>
-        <td><span class="var24"></span></td>
-        <td><span class="var36"></span></td>
+        <td class="red bordeA"><span class="var19"></span></td>
+        <td class="yellow"><span class="var23"></span></td>
+        <td class="green bordeB"><span class="var35"></span></td>
         <td class="br0 w0" rowspan="2"></td>
-        <td><span class="var18"></span></td>
-        <td><span class="var32"></span></td>
-        <td><span class="var44"></span></td>
+        <td class="red bordeA"><span class="var18"></span></td>
+        <td class="yellow"><span class="var31"></span></td>
+        <td class="green bordeB"><span class="var43"></span></td>
       </tr>
       <tr>
-        <td colspan="3"><span class="var13"></span></td>
-        <td colspan="3"><span class="var9"></span></td>
-        <td colspan="3"><span class="var17"></span></td>
+        <td class="blue bordeC" colspan="3"><span class="var12"></span></td>
+        <td class="blue bordeC" colspan="3"><span class="var8"></span></td>
+        <td class="blue bordeC" colspan="3"><span class="var16"></span></td>
+      </tr>
+      <tr>
+        <td class="br0 h0 wi" colspan="13"></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="br0 wi"></td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/proteinas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/grasas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/carbohidratos.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td class="br0 w0"></td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/proteinas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/grasas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/carbohidratos.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td class="br0 w0"></td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/proteinas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/grasas.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="img/carbohidratos.svg" width="100%" height="100%" />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td class="wi" rowspan="2"><label class="rotate270">Experto</label></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td class="red bordeA"><span class="var19"></span></td>
+        <td class="yellow"><span class="var28"></span></td>
+        <td class="green bordeB"><span class="var40"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td class="red bordeA"><span class="var19"></span></td>
+        <td class="yellow"><span class="var24"></span></td>
+        <td class="green bordeB"><span class="var36"></span></td>
+        <td class="br0 w0" rowspan="2"></td>
+        <td class="red bordeA"><span class="var18"></span></td>
+        <td class="yellow"><span class="var32"></span></td>
+        <td class="green bordeB"><span class="var44"></span></td>
+      </tr>
+      <tr>
+        <td class="blue bordeC" colspan="3"><span class="var13"></span></td>
+        <td class="blue bordeC" colspan="3"><span class="var9"></span></td>
+        <td class="blue bordeC" colspan="3"><span class="var17"></span></td>
       </tr>
     </tbody>
   </table>
+
+
+  <form id="caloriasForm">
+    <div class="cajaSalto">
+      <label for="peso">Peso (kg): </label>
+      <input type="number" id="peso" required oninput="validarRango('peso', 0, 500)">
+    </div>
+    <div class="cajaSalto">
+      <label for="altura">Altura (cm): </label>
+      <input type="number" id="altura" required oninput="validarRango('altura', 0, 400)">
+    </div>
+    <div class="cajaSalto">
+      <label for="edad">Edad: </label>
+      <input type="number" id="edad" required oninput="validarRango('edad', 0, 120)">
+    </div>
+    <div class="cajaSalto">
+      <label for="genero">Género: </label>
+      <select id="genero" required>
+        <option value="5">Hombre</option>
+        <option value="-161">Mujer</option>
+      </select>
+    </div>
+  </form>
+  
+  <script>
+    function validarRango(id, min, max) {
+      let input = document.getElementById(id);
+      let valor = parseInt(input.value);
+  
+      if (isNaN(valor)) {
+        // Si el valor no es un número válido, establecer el valor a vacío
+        input.value = '';
+      } else if (valor < min) {
+        input.value = min;
+      } else if (valor > max) {
+        input.value = max;
+      }
+    }
+  </script>
+  
+  
+
+  
 
   <script src="js/1.js"></script>
 

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
     function cargarValoresDesdeLocalStorage() {
         document.getElementById("peso").value = localStorage.getItem("peso") || "";
@@ -6,20 +6,37 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("edad").value = localStorage.getItem("edad") || "";
         document.getElementById("genero").value = localStorage.getItem("genero") || "";
     }
-    
+
     function guardarValoresLocalmente() {
         localStorage.setItem("peso", document.getElementById("peso").value);
         localStorage.setItem("altura", document.getElementById("altura").value);
         localStorage.setItem("edad", document.getElementById("edad").value);
         localStorage.setItem("genero", document.getElementById("genero").value);
     }
-    
-    function formatearNumero(numero) {
-        var numeroFormateado = numero.toFixed(2); // Formatea a dos decimales
 
-        // Elimina los decimales si son ".00"
-        if (numeroFormateado.slice(-3) === ".00") {
-            numeroFormateado = numeroFormateado.slice(0, -3);
+    function formatearNumero(numero) {
+        
+        if (isNaN(numero) || !isFinite(numero)) {
+            return "";
+        }
+
+        var parteEntera = Math.floor(numero);
+        var parteDecimal = numero - parteEntera;
+
+        // Redondea la parte decimal según tu regla
+        if (parteDecimal <= 0.3) {
+            parteDecimal = 0;
+        } else if (parteDecimal <= 0.7) {
+            parteDecimal = 0.5;
+        } else {
+            parteDecimal = 1;
+        }
+
+        var numeroFormateado = (parteEntera + parteDecimal).toFixed(1); // Formatea a un decimal
+
+        // Elimina el decimal si es ".0"
+        if (numeroFormateado.slice(-2) === ".0") {
+            numeroFormateado = numeroFormateado.slice(0, -2);
         }
 
         // Reemplaza la coma por punto si es el separador decimal
@@ -27,15 +44,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
         return numeroFormateado;
     }
-    
+
+
+
     function calcularCalorias() {
         var peso1 = parseFloat(document.getElementById("peso").value);
         var altura2 = parseFloat(document.getElementById("altura").value);
         var edad3 = parseInt(document.getElementById("edad").value);
         var genero4 = parseFloat(document.getElementById("genero").value);
-    
+
         var resultado5 = 10 * peso1 + 6.25 * altura2 - 5 * edad3 + genero4;
-    
+
         var var6 = resultado5 * 1.55;
         var var7 = resultado5 * 1.85;
         var var8 = resultado5 * 2.2;
@@ -50,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
         var var17 = var9 + 500;
         var var18 = peso1 * 2;
         var var19 = peso1 * 3;
-        console.log(var19);
         const const20 = 0.03333;
         var var21 = const20 * var6;
         var var22 = const20 * var7;
@@ -76,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var var42 = (var15 - (var19 * 4) - (var30 * 9)) / 4;
         var var43 = (var16 - (var19 * 4) - (var31 * 9)) / 4;
         var var44 = (var17 - (var19 * 4) - (var32 * 9)) / 4;
-    
+
         document.querySelector(".var6").innerText = formatearNumero(var6);
         document.querySelector(".var7").innerText = formatearNumero(var7);
         document.querySelector(".var8").innerText = formatearNumero(var8);
@@ -89,13 +107,13 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(".var15").innerText = formatearNumero(var15);
         document.querySelector(".var16").innerText = formatearNumero(var16);
         document.querySelector(".var17").innerText = formatearNumero(var17);
-        document.querySelectorAll(".var18").forEach(function(elemento) {
+        document.querySelectorAll(".var18").forEach(function (elemento) {
             elemento.innerText = formatearNumero(var19);
         });
-        document.querySelectorAll(".var19").forEach(function(elemento) {
+        document.querySelectorAll(".var19").forEach(function (elemento) {
             elemento.innerText = formatearNumero(var19);
         });
-        
+
         document.querySelector(".var21").innerText = formatearNumero(var21);
         document.querySelector(".var22").innerText = formatearNumero(var22);
         document.querySelector(".var23").innerText = formatearNumero(var23);
@@ -120,10 +138,10 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(".var42").innerText = formatearNumero(var42);
         document.querySelector(".var43").innerText = formatearNumero(var43);
         document.querySelector(".var44").innerText = formatearNumero(var44);
-        
+
         guardarValoresLocalmente();
     }
-    
+
     var elementosEntrada = document.querySelectorAll("#caloriasForm input, #caloriasForm select");
     elementosEntrada.forEach(function (elemento) {
         elemento.addEventListener("input", calcularCalorias);

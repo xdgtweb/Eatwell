@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var partes = numero.split(",");
         if (partes.length === 2) {
             // Solo aplica el estilo si hay parte decimal
-            elemento.innerHTML = partes[0] + ",<span style='font-size: 7px;'>" + partes[1] + "</span>";
+            elemento.innerHTML = partes[0] + ",<span style='font-size: 8px;'>" + partes[1] + "</span>";
         } else {
             // No hay parte decimal, no se aplica el estilo
             elemento.innerText = numero;

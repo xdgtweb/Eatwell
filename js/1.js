@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function formatearNumero(numero) {
-        
         if (isNaN(numero) || !isFinite(numero)) {
             return "";
         }
@@ -32,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
             parteDecimal = 1;
         }
 
-        var numeroFormateado = (parteEntera + parteDecimal).toFixed(1); // Formatea a un decimal
+        // Formatea a un decimal
+        var numeroFormateado = (parteEntera + parteDecimal).toFixed(1);
 
         // Elimina el decimal si es ".0"
         if (numeroFormateado.slice(-2) === ".0") {
@@ -44,6 +44,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return numeroFormateado;
     }
+
+
+    function aplicarEstiloDecimal(elemento, numero) {
+        var partes = numero.split(".");
+        if (partes.length === 2) {
+            // Solo aplica el estilo si hay parte decimal
+            elemento.innerHTML = partes[0] + ".<span style='font-size: 7px;'>" + partes[1] + "</span>";
+        } else {
+            // No hay parte decimal, no se aplica el estilo
+            elemento.innerText = numero;
+        }
+    }
+
 
 
 
@@ -95,49 +108,50 @@ document.addEventListener("DOMContentLoaded", function () {
         var var43 = (var16 - (var19 * 4) - (var31 * 9)) / 4;
         var var44 = (var17 - (var19 * 4) - (var32 * 9)) / 4;
 
-        document.querySelector(".var6").innerText = formatearNumero(var6);
-        document.querySelector(".var7").innerText = formatearNumero(var7);
-        document.querySelector(".var8").innerText = formatearNumero(var8);
-        document.querySelector(".var9").innerText = formatearNumero(var9);
-        document.querySelector(".var10").innerText = formatearNumero(var10);
-        document.querySelector(".var11").innerText = formatearNumero(var11);
-        document.querySelector(".var12").innerText = formatearNumero(var12);
-        document.querySelector(".var13").innerText = formatearNumero(var13);
-        document.querySelector(".var14").innerText = formatearNumero(var14);
-        document.querySelector(".var15").innerText = formatearNumero(var15);
-        document.querySelector(".var16").innerText = formatearNumero(var16);
-        document.querySelector(".var17").innerText = formatearNumero(var17);
+        aplicarEstiloDecimal(document.querySelector(".var6"), formatearNumero(var6));
+        aplicarEstiloDecimal(document.querySelector(".var7"), formatearNumero(var7));
+        aplicarEstiloDecimal(document.querySelector(".var8"), formatearNumero(var8));
+        aplicarEstiloDecimal(document.querySelector(".var9"), formatearNumero(var9));
+        aplicarEstiloDecimal(document.querySelector(".var10"), formatearNumero(var10));
+        aplicarEstiloDecimal(document.querySelector(".var11"), formatearNumero(var11));
+        aplicarEstiloDecimal(document.querySelector(".var12"), formatearNumero(var12));
+        aplicarEstiloDecimal(document.querySelector(".var13"), formatearNumero(var13));
+        aplicarEstiloDecimal(document.querySelector(".var14"), formatearNumero(var14));
+        aplicarEstiloDecimal(document.querySelector(".var15"), formatearNumero(var15));
+        aplicarEstiloDecimal(document.querySelector(".var16"), formatearNumero(var16));
+        aplicarEstiloDecimal(document.querySelector(".var17"), formatearNumero(var17));
+
         document.querySelectorAll(".var18").forEach(function (elemento) {
-            elemento.innerText = formatearNumero(var19);
+            elemento.innerText = formatearNumero(var18);
         });
         document.querySelectorAll(".var19").forEach(function (elemento) {
             elemento.innerText = formatearNumero(var19);
         });
 
-        document.querySelector(".var21").innerText = formatearNumero(var21);
-        document.querySelector(".var22").innerText = formatearNumero(var22);
-        document.querySelector(".var23").innerText = formatearNumero(var23);
-        document.querySelector(".var24").innerText = formatearNumero(var24);
-        document.querySelector(".var25").innerText = formatearNumero(var25);
-        document.querySelector(".var26").innerText = formatearNumero(var26);
-        document.querySelector(".var27").innerText = formatearNumero(var27);
-        document.querySelector(".var28").innerText = formatearNumero(var28);
-        document.querySelector(".var29").innerText = formatearNumero(var29);
-        document.querySelector(".var30").innerText = formatearNumero(var30);
-        document.querySelector(".var31").innerText = formatearNumero(var31);
-        document.querySelector(".var32").innerText = formatearNumero(var32);
-        document.querySelector(".var33").innerText = formatearNumero(var33);
-        document.querySelector(".var34").innerText = formatearNumero(var34);
-        document.querySelector(".var35").innerText = formatearNumero(var35);
-        document.querySelector(".var36").innerText = formatearNumero(var36);
-        document.querySelector(".var37").innerText = formatearNumero(var37);
-        document.querySelector(".var38").innerText = formatearNumero(var38);
-        document.querySelector(".var39").innerText = formatearNumero(var39);
-        document.querySelector(".var40").innerText = formatearNumero(var40);
-        document.querySelector(".var41").innerText = formatearNumero(var41);
-        document.querySelector(".var42").innerText = formatearNumero(var42);
-        document.querySelector(".var43").innerText = formatearNumero(var43);
-        document.querySelector(".var44").innerText = formatearNumero(var44);
+        aplicarEstiloDecimal(document.querySelector(".var21"), formatearNumero(var21));
+        aplicarEstiloDecimal(document.querySelector(".var22"), formatearNumero(var22));
+        aplicarEstiloDecimal(document.querySelector(".var23"), formatearNumero(var23));
+        aplicarEstiloDecimal(document.querySelector(".var24"), formatearNumero(var24));
+        aplicarEstiloDecimal(document.querySelector(".var25"), formatearNumero(var25));
+        aplicarEstiloDecimal(document.querySelector(".var26"), formatearNumero(var26));
+        aplicarEstiloDecimal(document.querySelector(".var27"), formatearNumero(var27));
+        aplicarEstiloDecimal(document.querySelector(".var28"), formatearNumero(var28));
+        aplicarEstiloDecimal(document.querySelector(".var29"), formatearNumero(var29));
+        aplicarEstiloDecimal(document.querySelector(".var30"), formatearNumero(var30));
+        aplicarEstiloDecimal(document.querySelector(".var31"), formatearNumero(var31));
+        aplicarEstiloDecimal(document.querySelector(".var32"), formatearNumero(var32));
+        aplicarEstiloDecimal(document.querySelector(".var33"), formatearNumero(var33));
+        aplicarEstiloDecimal(document.querySelector(".var34"), formatearNumero(var34));
+        aplicarEstiloDecimal(document.querySelector(".var35"), formatearNumero(var35));
+        aplicarEstiloDecimal(document.querySelector(".var36"), formatearNumero(var36));
+        aplicarEstiloDecimal(document.querySelector(".var37"), formatearNumero(var37));
+        aplicarEstiloDecimal(document.querySelector(".var38"), formatearNumero(var38));
+        aplicarEstiloDecimal(document.querySelector(".var39"), formatearNumero(var39));
+        aplicarEstiloDecimal(document.querySelector(".var40"), formatearNumero(var40));
+        aplicarEstiloDecimal(document.querySelector(".var41"), formatearNumero(var41));
+        aplicarEstiloDecimal(document.querySelector(".var42"), formatearNumero(var42));
+        aplicarEstiloDecimal(document.querySelector(".var43"), formatearNumero(var43));
+        aplicarEstiloDecimal(document.querySelector(".var44"), formatearNumero(var44));
 
         guardarValoresLocalmente();
     }

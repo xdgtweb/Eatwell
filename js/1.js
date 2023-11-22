@@ -65,9 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var altura2 = parseFloat(document.getElementById("altura").value);
         var edad3 = parseInt(document.getElementById("edad").value);
         var genero4 = parseFloat(document.getElementById("genero").value);
-
         var resultado5 = 10 * peso1 + 6.25 * altura2 - 5 * edad3 + genero4;
-
+console.log(peso1, altura2, edad3);
         var var6 = resultado5 * 1.55;
         var var7 = resultado5 * 1.85;
         var var8 = resultado5 * 2.2;
@@ -155,6 +154,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
         guardarValoresLocalmente();
     }
+
+    var peso1Actual = document.getElementById("peso").value;
+    setInterval(function () {
+        var peso1Nuevo = document.getElementById("peso").value;
+
+        if (peso1Nuevo !== peso1Actual) {
+            peso1Actual = peso1Nuevo;
+            calcularCalorias();
+        }
+    }, 10);
+
+    var altura2Actual = document.getElementById("altura").value;
+    setInterval(function () {
+        var altura2Nuevo = document.getElementById("altura").value;
+
+        if (altura2Nuevo !== altura2Actual) {
+            altura2Actual = altura2Nuevo;
+            calcularCalorias();
+        }
+    }, 10);
+
+    var edad3Actual = document.getElementById("edad").value;
+    setInterval(function () {
+        var edad3Nuevo = document.getElementById("edad").value;
+
+        if (edad3Nuevo !== edad3Actual) {
+            edad3Actual = edad3Nuevo;
+            calcularCalorias();
+        }
+    }, 10);
 
     var elementosEntrada = document.querySelectorAll("#caloriasForm input, #caloriasForm select");
     elementosEntrada.forEach(function (elemento) {

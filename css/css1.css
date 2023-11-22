@@ -18,12 +18,13 @@ body {
 }
 
 #caloriasForm {
-    padding: 20px;
+    margin-top: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
 }
 
 label {
@@ -47,6 +48,7 @@ select {
     margin-bottom: 16px;
     box-sizing: border-box;
     font-family: 'fuente1';
+    margin-top: 10px;
 }
 
 input, select
@@ -58,7 +60,7 @@ input, select
 
 .cajaSalto {
     display: inline-block;
-    width: 100px;
+    width: 90px;
 }
 
 button:hover {

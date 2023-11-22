@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/css1.css">
+  <link rel="stylesheet" type="text/css" href="css/inputSwipe.css">
+  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
   <title>Tabla con Separación</title>
 </head>
 
@@ -485,20 +487,45 @@
     </tbody>
   </table>
 
-
   <form id="caloriasForm">
+
     <div class="cajaSalto">
+      <div class="cajaGlide">
+        <div id="glidePeso">
+          <div class="glide__slides" id="numberContainerPeso"></div>
+        </div>
+      </div>
+      <div id="selectedNumber">
+        <input type="text" id="peso" class="selectedInputPeso" readonly>
+      </div>
       <label for="peso">Peso (kg): </label>
-      <input type="number" id="peso" required oninput="validarRango('peso', 0, 500)">
     </div>
+
     <div class="cajaSalto">
+      <div class="cajaGlide">
+        <div id="glideAltura">
+          <div class="glide__slides" id="numberContainerAltura"></div>
+        </div>
+      </div>
+      <div id="selectedNumber">
+        <input type="text" id="altura" class="selectedInputAltura" readonly>
+      </div>
       <label for="altura">Altura (cm): </label>
-      <input type="number" id="altura" required oninput="validarRango('altura', 0, 400)">
+    </div>
+
     </div>
     <div class="cajaSalto">
+      <div class="cajaGlide">
+        <div id="glideEdad">
+          <div class="glide__slides" id="numberContainerEdad"></div>
+        </div>
+      </div>
+      <div id="selectedNumber">
+        <input type="text" id="edad" class="selectedInputEdad" readonly>
+      </div>
       <label for="edad">Edad: </label>
-      <input type="number" id="edad" required oninput="validarRango('edad', 0, 120)">
     </div>
+
     <div class="cajaSalto">
       <label for="genero">Género: </label>
       <select id="genero" required>
@@ -546,6 +573,7 @@
 
 
   <script src="js/1.js"></script>
+  <script src="js/inputSwipe.js"></script>
 
 </body>
 
